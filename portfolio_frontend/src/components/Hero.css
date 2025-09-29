@@ -1,0 +1,73 @@
+/* src/components/Hero.css */
+.hero-section {
+  position: relative;
+  width: 100%;   /* use 100% not 100vw */
+  height: 100vh;
+  overflow: hidden;
+  background: black; /* fallback if video fails */
+  /* ✅ Only Hero is flex-centered */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  /* center only where the component needs it — keep d-flex in the component's className */
+}
+
+.hero-title {
+  font-family: "Orbitron", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #39ff14;
+  text-shadow: 0 0 10px rgba(57, 255, 20, 0.9),
+               0 0 20px rgba(0, 230, 255, 0.6);
+  margin-bottom: 15px;
+}
+
+.hero-subtitle {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #f1f1f1;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.7);
+  margin-bottom: 25px;
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0a0a0a;
+  background: #39ff14;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 12px #39ff14, 0 0 24px #00e6ff;
+}
+
+.hero-btn:hover {
+  background: #00e6ff;
+  color: #fff;
+  box-shadow: 0 0 20px #00e6ff, 0 0 40px #39ff14;
+}

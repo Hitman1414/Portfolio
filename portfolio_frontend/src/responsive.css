@@ -1,0 +1,83 @@
+/* 🌍 General Responsive Fixes */
+html, body {
+  font-size: 16px;
+}
+
+/* Fluid typography for section titles */
+.section-title,
+.hero-title,
+.skills-title,
+.achievements-title,
+.footer-title {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Hero responsiveness */
+.hero-title {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+}
+.hero-subtitle {
+  font-size: clamp(1rem, 3vw, 1.4rem);
+}
+.hero-btn {
+  padding: 12px 28px;
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+}
+
+/* Navbar */
+@media (max-width: 991px) {
+  .neon-navbar {
+    padding: 10px;
+  }
+  .nav-link {
+    justify-content: center;
+    padding: 12px;
+    font-size: 1.1rem;
+  }
+}
+
+/* Skills Section */
+@media (max-width: 991px) {
+  .left-col {
+    margin-bottom: 30px;
+  }
+  .sticky-img-wrap {
+    position: static;
+    height: auto;
+  }
+  .circle-skill-grid,
+  .neon-badges,
+  .skills-card-grid {
+    justify-content: center;
+  }
+}
+
+/* Achievements Section */
+@media (max-width: 991px) {
+  .achievement-card {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .row > .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* Footer */
+@media (max-width: 768px) {
+  .footer-title {
+    font-size: 2rem;
+  }
+  .footer-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .footer-copy {
+    font-size: 0.85rem;
+  }
+}

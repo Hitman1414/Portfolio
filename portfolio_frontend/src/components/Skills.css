@@ -1,0 +1,125 @@
+.skills-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  justify-items: center;
+}
+
+/* Card */
+.skill-card {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  color: #fff;
+  width: 200px;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 0 15px rgba(57, 255, 20, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 25px rgba(57, 255, 20, 0.8),
+              0 0 45px rgba(0, 230, 255, 0.6);
+}
+
+/* Labels */
+.skill-card-label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #fffb14;
+  text-shadow: 0 0 8px rgba(57, 255, 20, 0.9),
+               0 0 16px rgba(0, 230, 255, 0.6);
+}
+
+/* Images */
+.unicard-img {
+  max-width: 120px;
+  max-height: 120px;
+  object-fit: contain;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.unicard-img:hover {
+  transform: scale(1.1);
+}
+
+/* Special cards (sketches & photos) */
+.sketch-unicard img {
+  max-width: 140px;
+  max-height: 120px;
+  object-fit: cover;
+}
+
+.placeholder-text {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-style: italic;
+  margin-top: 20px;
+}
+
+/* Section Title */
+.skills-title {
+  font-family: "Orbitron", sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fffb14;
+  text-shadow: 0 0 12px rgba(57, 255, 20, 0.9),
+               0 0 24px rgba(0, 230, 255, 0.6);
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+/* 📱 Responsive tweaks */
+@media (max-width: 991px) {
+  .skills-card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+
+  .skill-card {
+    width: 160px;
+    height: 180px;
+  }
+
+  .unicard-img {
+    max-width: 100px;
+    max-height: 100px;
+  }
+
+  .skill-card-label {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .skills-card-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .skill-card {
+    width: 100%;
+    height: auto;
+    padding: 12px;
+  }
+
+  .unicard-img {
+    max-width: 80px;
+    max-height: 80px;
+  }
+
+  .skills-title {
+    font-size: 2rem;
+  }
+
+  .skill-card-label {
+    font-size: 0.9rem;
+  }
+}
