@@ -1,0 +1,86 @@
+.achievements-section {
+  padding: 80px 24px;
+  background: linear-gradient(180deg, #122317 0%, #0b1b12 50%, #040404 100%);
+  color: #e9ffe9;
+  text-align: center;
+}
+
+.achievements-title {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #fffb14;
+  text-shadow: 0 0 12px rgba(57, 255, 20, 0.9),
+               0 0 24px rgba(0, 230, 255, 0.6);
+  margin-bottom: 48px;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  justify-content: center;
+  align-items: start;
+  padding: 0 20px;
+}
+
+.achievement-card {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 14px;
+  padding: 28px;
+  box-shadow: 0 0 15px rgba(57, 255, 20, 0.4),
+              0 0 35px rgba(0, 230, 255, 0.2);
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(57, 255, 20, 0.15);
+}
+
+.achievement-card:hover {
+  box-shadow: 0 0 25px rgba(57, 255, 20, 0.9),
+              0 0 45px rgba(0, 230, 255, 0.6);
+  border-color: rgba(57, 255, 20, 0.4);
+  transform: translateY(-6px);
+}
+
+.achievement-icon {
+  font-size: 3rem;
+  margin-bottom: 12px;
+  color: #39ff14;
+  text-shadow: 0 0 8px #39ff14, 0 0 18px #00e6ff;
+}
+
+.achievement-title {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fffb14;
+  text-shadow: 0 0 8px rgba(57, 255, 20, 0.9),
+               0 0 16px rgba(0, 230, 255, 0.6);
+  margin-bottom: 10px;
+}
+
+.achievement-desc {
+  font-size: 1rem;
+  color: #c8ffc8;
+  line-height: 1.6;
+  padding: 0 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .achievements-title {
+    font-size: 2.2rem;
+  }
+
+  .achievement-card {
+    padding: 22px;
+  }
+
+  .achievement-title {
+    font-size: 1.3rem;
+  }
+
+  .achievement-desc {
+    font-size: 0.95rem;
+  }
+}

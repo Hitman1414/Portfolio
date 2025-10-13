@@ -1,0 +1,62 @@
+/* src/App.css
+   Minimal global app styles — sections keep control of their own layout.
+*/
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+/* root */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Full height sections — don't force display:flex here */
+.hero-section,
+.skills-section,
+.achievements-section,
+.footer-section {
+  min-height: 100vh; /* each section fills viewport height */
+  width: 100%;       /* use 100% (not 100vw) to avoid overflow */
+  margin: 0;
+  padding: 0;
+}
+
+/* Section backgrounds (keep your gradients) */
+.skills-section {
+  display: block; 
+  background: linear-gradient(to bottom, #040404, #0b1b12 40%, #3B3C36 100%);
+  color: #f1f1f1;
+  padding: 60px 20px;
+}
+
+.achievements-section {
+  background: linear-gradient(to bottom, #3B3C36 0%, #2f3a22 60%, #4B5320 100%);
+  color: #f1f1f1;
+  padding: 60px 20px;
+}
+
+.footer-section,
+footer {
+  background: linear-gradient(to bottom, #4B5320, #414833);
+  color: #f1f1f1;
+  padding: 40px 20px;
+}
+
+/* glass-card utility kept */
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+}
+
+/* small helper for app container */
+.app-container {
+  width: 100%;
+}

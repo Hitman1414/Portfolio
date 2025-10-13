@@ -1,0 +1,217 @@
+/* 🌟 Floating Neon Particles */
+.footer-particles {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.footer-particles::before,
+.footer-particles::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: radial-gradient(circle, #39ff14, transparent 60%);
+  border-radius: 50%;
+  animation: floatParticles 18s linear infinite;
+  opacity: 0.6;
+  box-shadow:
+    100px 200px #00e6ff80,
+    250px 300px #39ff1480,
+    500px 250px #ff00ff50,
+    750px 100px #00e6ff70,
+    900px 450px #39ff1470,
+    1200px 350px #00e6ff60,
+    300px 500px #ff00ff50;
+}
+
+.footer-particles::after {
+  animation-delay: 8s;
+  opacity: 0.4;
+  box-shadow:
+    200px 400px #39ff1470,
+    400px 150px #00e6ff70,
+    700px 450px #ff00ff60,
+    950px 250px #00e6ff80,
+    1100px 300px #39ff1470;
+}
+
+/* Floating upwards animation */
+@keyframes floatParticles {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateY(-100px) scale(1.2);
+  }
+  100% {
+    transform: translateY(-200px) scale(1);
+    opacity: 0.2;
+  }
+}
+
+
+.footer-section {
+  position: relative;
+  overflow: hidden;
+  padding: 100px 20px 60px;
+  color: #e9ffe9;
+  text-align: center;
+  background: linear-gradient(
+    180deg,
+    #0a0a0a 0%,
+    #081309 40%,
+    #092a13 70%,
+    #000000 100%
+  );
+  /* ✨ Removed harsh borders/shadows */
+  border: none;
+  box-shadow: none;
+}
+
+/* 🌈 Smooth glowing animated background */
+.footer-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 25% 35%, #00e6ff40 0%, transparent 50%),
+              radial-gradient(circle at 70% 65%, #39ff1440 0%, transparent 50%),
+              radial-gradient(circle at 50% 80%, #ff00ff20 0%, transparent 60%);
+  background-size: 200% 200%;
+  animation: pulseGradient 14s ease-in-out infinite alternate;
+  z-index: 0;
+  filter: blur(60px);
+  opacity: 0.6;
+}
+
+/* Pulse animation for soft flow */
+@keyframes pulseGradient {
+  0% {
+    background-position: 20% 30%, 80% 70%, 50% 50%;
+  }
+  50% {
+    background-position: 60% 40%, 40% 60%, 70% 50%;
+  }
+  100% {
+    background-position: 80% 20%, 20% 80%, 30% 70%;
+  }
+}
+
+/* Main content layer */
+.footer-content {
+  position: relative;
+  z-index: 1;
+}
+
+.footer-heading {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2rem;
+  color: #fffb14;
+  text-shadow: 0 0 12px rgba(57, 255, 20, 0.8),
+               0 0 20px rgba(0, 230, 255, 0.6);
+  margin-bottom: 10px;
+}
+
+.footer-subtext {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 24px;
+}
+
+/* Neon glowing CTA */
+.footer-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, #39ff14, #00e6ff);
+  color: #000;
+  padding: 10px 20px;
+  font-weight: 700;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-bottom: 30px;
+  box-shadow: 0 0 20px rgba(57, 255, 20, 0.6),
+              0 0 30px rgba(0, 230, 255, 0.4);
+  transition: all 0.3s ease;
+}
+
+.footer-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 25px #39ff14, 0 0 45px #00e6ff;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.footer-socials a {
+  font-size: 1.8rem;
+  color: #39ff14;
+  text-shadow: 0 0 8px #39ff14, 0 0 16px #00e6ff;
+  transition: all 0.3s ease;
+}
+
+.footer-socials a:hover {
+  color: #00e6ff;
+  text-shadow: 0 0 15px #00e6ff, 0 0 30px #39ff14;
+  transform: translateY(-3px);
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.footer-links a {
+  color: #f1f1f1;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #39ff14;
+  text-shadow: 0 0 8px #39ff14;
+}
+
+/* Removed divider line for seamless merge */
+.footer-line {
+  display: none;
+}
+
+/* Subtle copyright */
+.footer-copy {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+  margin-top: 20px;
+}
+
+.footer-copy span {
+  color: #39ff14;
+  font-weight: 700;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer-heading {
+    font-size: 1.6rem;
+  }
+
+  .footer-btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .footer-socials a {
+    font-size: 1.5rem;
+  }
+}
